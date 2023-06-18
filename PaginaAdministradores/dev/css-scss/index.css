@@ -1,0 +1,26 @@
+.modal-header h1{
+    text-align: center;
+}
+.modal-content{
+    background-color: rgb(166, 159, 31);
+    text-align: center;
+}
+.modal-body{
+    font-weight: bold;
+}
+.modal-body div{
+    display: flex;
+    flex-direction: row;
+}
+.lista {
+    margin: 0px 0px 0px -150px;
+}
+.modal-content #modal2{
+    background-color: rgb(241, 232, 58);
+    text-align: center;
+}
+body{
+    background-image: url(../assets/img/hombre-haciendo-compras.jpg);
+    background-size:cover;
+    background-size: cover;
+}

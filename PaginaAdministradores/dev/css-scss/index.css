@@ -28,3 +28,25 @@ body{
     background-size:cover;
     background-size: cover;
 }
+
+input {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 4px;
+    font-family: 'Lato';
+    width: 300px;
+    margin-bottom: 30px;
+}
+
+label.error {
+    color: red;  
+    display: block;
+    margin-top: 35px;
+    position: absolute;
+    left: 145px
+}
+input.error {
+    border: 1px solid red;
+    font-weight: 300;
+    color: red;
+}

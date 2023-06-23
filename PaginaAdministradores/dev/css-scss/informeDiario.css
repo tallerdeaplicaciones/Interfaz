@@ -1,0 +1,11 @@
+#totalVenta{
+    border:2px solid green;
+    width: 30%;
+    text-align: center;
+    float: right;
+}
+
+#thead th {
+    background-color: green;
+    color: white; 
+}

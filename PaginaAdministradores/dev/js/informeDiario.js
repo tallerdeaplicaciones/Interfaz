@@ -1,11 +1,6 @@
-var fecha= new Date();
-var dia = fecha.getDate();
-var mes = fecha.getMonth()+1;
-var anio = fecha.getFullYear();
-document.getElementById("fechaActual").innerHTML = `${dia}/${mes}/${anio}`
-function sel(){
+function sel() {
     var filtroSelect = document.getElementById('documento').value;
-    var filas = document.querySelectorAll(' #tabla-ventas tbody');
+    var filas = document.querySelectorAll('#tabla-ventas tbody tr');
 
     if (filtroSelect === '') {
         mostrarFilas(filas);

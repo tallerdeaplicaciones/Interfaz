@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <!-- CDN CSS DATATABLES -->
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <script src="//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <title>Página de Ventas</title>
+</head>
+
+<body>
+    <header class="bg-dark py-5 bannerimage">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder">Tu hogar limpio y saludable, nuestro compromiso</h1>
+                <p class="lead fw-normal text-white-50 mb-0">Productos de aseo para un hogar feliz</p>
+            </div>
+        </div>
+    </header>
+    <!-- CARRITO -->
+    <details class="cart-details">
+        <summary>
+            <i class="bi-cart-fill me-1"></i>Carrito de compras<span
+                class="badge bg-dark text-white ms-1 rounded-pill number-items-cart">0</span>
+        </summary>
+
+        <div class="container content-section">
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">Producto</span>
+                <span class="cart-price cart-header cart-column">Precio</span>
+                <span class="cart-quantity cart-header cart-column">Cantidad</span>
+                <span class="cart-total cart-header cart-column">Total</span>
+                <span class="cart-remove cart-header cart-column"></span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">$0</span>
+            </div>
+            <button class="btn btn-primary btn-purchase " type="button">Comprar</button>
+        </div>
+    </details>
+
+    <!-- TABLA PRODUCTOS -->
+    <div class="container">
+        <table id="tablaProductos" class="display">
+            <thead>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Código</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Agregar al carrito</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="assets/img/producto1.png" alt="Producto 1" style="width: 100px;"></td>
+                    <td>Cód. 019452</td>
+                    <td>Lavalozas Ecológico Fuzol</td>
+                    <td>$1890</td>
+                    <td><button class="btn btn-outline-dark mt-auto shop-item-button" type="button">Añadir al
+                            carrito</button></td>
+                </tr>
+                <tr>
+                    <td><img src="assets/img/producto2.jpg" alt="Producto 2" style="width: 100px;"></td>
+                    <td>Cód. 064532</td>
+                    <td>Antigrasas Mr. Músculo</td>
+                    <td>$3550</td>
+                    <td><button class="btn btn-outline-dark mt-auto shop-item-button " type="button">Añadir al
+                            carrito</button></td>
+                </tr>
+                <tr>
+                    <td><img src="assets/img/producto3.jpg" alt="Producto 3" style="width: 100px;"></td>
+                    <td>Cód. 033542</td>
+                    <td>Antigrasas Multiuso KH-7</td>
+                    <td>$4290</td>
+                    <td><button class="btn btn-outline-dark mt-auto shop-item-button" type="button">Añadir al
+                            carrito</button></td>
+                </tr>
+                <tr>
+                    <td><img src="assets/img/producto4.jpg" alt="Producto 4" style="width: 100px;"></td>
+                    <td>Cód. 075266</td>
+                    <td>Limpiador de piso Clorox</td>
+                    <td>$2550</td>
+                    <td><button class="btn btn-outline-dark mt-auto shop-item-button" type="button">Añadir al
+                            carrito</button></td>
+                </tr>
+                <tr>
+                    <td><img src="assets/img/producto5.jpg" alt="Producto 5" style="width: 100px;"></td>
+                    <td>Cód. 019452</td>
+                    <td>Limpiador de piso Igenix</td>
+                    <td>$2590</td>
+                    <td><button class="btn btn-outline-dark mt-auto shop-item-button" type="button">Añadir al
+                            carrito</button></td>
+                </tr>
+                <tr>
+                    <td><img src="assets/img/producto6.png" alt="Producto 6" style="width: 100px;"></td>
+                    <td>Cód. 022314</td>
+                    <td>Detergente líquido Ariel</td>
+                    <td>$4500</td>
+                    <td><button class="btn btn-outline-dark mt-auto shop-item-button" type="button">Añadir al
+                            carrito</button></td>
+                </tr>
+                <tr>
+                    <td><img src="assets/img/producto7.jpg" alt="Producto 7" style="width: 100px;"></td>
+                    <td>Cód. 098765</td>
+                    <td>Jabón en polvo Omo</td>
+                    <td>$5990</td>
+                    <td><button class="btn btn-outline-dark mt-auto shop-item-button" type="button">Añadir al
+                            carrito</button></td>
+                </tr>
+                <tr>
+                    <td><img src="assets/img/producto8.jpg" alt="Producto 8" style="width: 100px;"></td>
+                    <td>Cód. 037892</td>
+                    <td>Desinfectante Lysol</td>
+                    <td>$3490</td>
+                    <td><button class="btn btn-outline-dark mt-auto shop-item-button" type="button">Añadir al
+                            carrito</button></td>
+                </tr>
+                <tr>
+                    <td><img src="assets/img/producto9.jpg" alt="Producto 9" style="width: 100px;"></td>
+                    <td>Cód. 056478</td>
+                    <td>Suavizante de telas Downy</td>
+                    <td>$2790</td>
+                    <td><button class="btn btn-outline-dark mt-auto shop-item-button" type="button">Añadir al
+                            carrito</button></td>
+                </tr>
+                <tr>
+                    <td><img src="assets/img/producto10.jpg" alt="Producto 10" style="width: 100px;"></td>
+                    <td>Cód. 024681</td>
+                    <td>Ambientador Glade</td>
+                    <td>$1890</td>
+                    <td><button class="btn btn-outline-dark mt-auto shop-item-button" type="button">Añadir al
+                            carrito</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <!-- FOOTER-->
+    <footer class="py-4 bg-dark">
+        <div class="container">
+            <h5 class="text-center text-white">Bazar el Túnel</h5>
+            <p class="m-0 text-center text-white">Porque tu hogar merece lo mejor confía en nosotros</p>
+            <p class="m-0 text-center text-white">&copy; 2023 El Túnel SpA</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" tabindex="-1" id="exitoModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Fénix tienda online</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>El producto ha sido agregado exitosamente al carrito. Por favor continue su compra.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+<script src="assets/js/javascript.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    $(document).ready(function () {
+        let table = new DataTable('#tablaProductos');
+    })
+</script>
+
+</html>

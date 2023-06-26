@@ -5,109 +5,230 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- JQUERY -->
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
+        crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="../css-scss/landing.css">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
     <title>Bienvenido!</title>
 </head>
 
-<body>
+<body class="bg-green">
     <header class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="./index.html">
-                    <img src="./img/logo.jpeg" alt="Logo de la empresa" class="img-fluid" style="max-width: 10%;">
+                <a class="navbar-brand" href="#">
+                    <img src="../assets/img/logo.jpeg" alt="" style="max-width: 100px;" class="img-fluid mx-auto">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal"
+                                data-bs-target="#loginModal">Iniciar sesion</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
+                            <a class="nav-link" href="#" data-bs-toggle="modal"
+                                data-bs-target="#registerModal">Registrate</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
+                            <a class="nav-link" href="#">Conocer mas</a>
+
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                            <a class="nav-link" href="#">Testimonios</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Acerca de nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Novedades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contacto</a>
+                        </li>
+
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <img src="https://via.placeholder.com/350x150" class="img-fluid">
-            </div>
-            <div class="col-md-6">
-                <h1>Texto de ejemplo</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisi vel bibendum bibendum,
-                    mauris sapien bibendum elit, vel bibendum sapien elit eget velit.</p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6">
-                <h1>Texto de ejemplo</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisi vel bibendum bibendum,
-                    mauris sapien bibendum elit, vel bibendum sapien elit eget velit.</p>
-            </div>
-            <div class="col-md-6">
-                <img src="https://via.placeholder.com/350x150" class="img-fluid">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Testimonios</h1>
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <p>Testimonio 1</p>
+    <!-- Modal de Inicio de Sesión -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Iniciar sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Formulario de inicio de sesión -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="emailRegistro" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="emailRegistro" placeholder="Ingresa tu email">
                         </div>
-                        <div class="carousel-item">
-                            <p>Testimonio 2</p>
+                        <div class="mb-3">
+                            <label for="passwordRegistro" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="passwordRegistro"
+                                placeholder="Ingresa tu contraseña">
                         </div>
-                        <div class="carousel-item">
-                            <p>Testimonio 3</p>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="row">
-            <div class="col-md-12">
+    <!-- Modal de Registro -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Registro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Formulario de registro -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Ingresa tu email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="password"
+                                placeholder="Ingresa tu contraseña">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Registrarse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container mt-5 pt-5">
+        <div class="row pt-5 align-items-center">
+            <div class="col-md-6 text-center mx-auto">
+                <img src="../assets/img/producto1.png" class="img-fluid mx-auto">
+            </div>
+            <div class="col-md-6 text-center mx-auto">
+                <h1>¡Descubre el Fuzollavalozas Concentrado Ecológico!</h1>
+                <p>Cuida tu hogar y el medio ambiente con Fuzollavalozas, el detergente concentrado ecológico de última
+                    generación. Su fórmula innovadora y respetuosa con el entorno garantiza una limpieza profunda y
+                    eficaz, sin comprometer la salud ni el equilibrio natural. Disfruta de una experiencia de limpieza
+                    sin igual y contribuye al cuidado del planeta con Fuzollavalozas Concentrado Ecológico. ¡Haz de tu
+                    hogar un lugar más limpio y sostenible!</p>
+
+
+            </div>
+        </div>
+
+        <div class="row mt-5 pt-5 align-items-center">
+            <div class="col-md-6 text-center mx-auto">
+                <h1>¡Descubre el Antigrasas KH7!</h1>
+                <p>Elimina la grasa más difícil de manera eficaz y sin esfuerzo con el Antigrasas KH7. Su fórmula
+                    avanzada y poderosa penetra en profundidad, disolviendo y eliminando la grasa acumulada en cualquier
+                    superficie. Ya sea en la cocina, el garaje o el taller, el Antigrasas KH7 es tu aliado infalible
+                    para dejar todo impecable. ¡Pruébalo y verás la diferencia!</p>
+
+
+            </div>
+            <div class="col-md-6 text-center mx-auto">
+                <img src="../assets/img/producto3.jpg" class="img-fluid mx-auto">
+            </div>
+        </div>
+        <!-- carrusel-->
+        <section id="testimonials" class="section section-sm bg-light">
+            <div class="container">
+                <h2 class="section-title text-center">Testimonios</h2>
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2">
+                        <div id="testimonial-carousel" class="carousel slide" data-bs-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-bs-target="#testimonial-carousel" data-bs-slide-to="0" class="active"></li>
+                                <li data-bs-target="#testimonial-carousel" data-bs-slide-to="1"></li>
+                                <li data-bs-target="#testimonial-carousel" data-bs-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="testimonial-item">
+                                        <img class="testimonial-image" src="../assets/imgCarousel/tesimonials1.jpeg"
+                                            alt="Cliente 1">
+                                        <p class="testimonial-text">¡La tienda tiene una increíble selección de productos! Encontré todo lo que necesitaba y más. El personal fue muy amable y me ayudó a encontrar exactamente lo que estaba buscando. ¡Volveré sin duda!</p>
+                                        <h5 class="testimonial-name">Catherine Williams</h5>
+                                        <p class="testimonial-status">Cliente habitual</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="testimonial-item">
+                                        <img class="testimonial-image" src="../assets/imgCarousel/testimonials2.jpg"
+                                            alt="Cliente 2">
+                                        <p class="testimonial-text">¡Esta tienda es increíble! Tienen una gran variedad de productos de alta calidad y a precios competitivos. La atención al cliente es excepcional y siempre me siento bienvenido. ¡Recomendaría esta tienda a todos mis amigos y familiares!</p>
+                                        <h5 class="testimonial-name">John Doe</h5>
+                                        <p class="testimonial-status">Cliente satisfecho</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="testimonial-item">
+                                        <img class="testimonial-image" src="../assets/imgCarousel/testimonials3.jpg"
+                                            alt="Cliente 3">
+                                        <p class="testimonial-text">¡No puedo decir lo suficiente sobre esta tienda! Tienen un personal amable y servicial que siempre está dispuesto a responder mis preguntas y brindar recomendaciones. Cada visita es una experiencia maravillosa. ¡Definitivamente soy un cliente leal!</p>
+                                        <h5 class="testimonial-name">Jane Smith</h5>
+                                        <p class="testimonial-status">Cliente leal</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#testimonial-carousel" role="button"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Anterior</span>
+                            </a>
+                            <a class="carousel-control-next" href="#testimonial-carousel" role="button"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Siguiente</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- acerca de nosotros -->
+        <div class="row mt-5 pt-5 align-items-center">
+            <div class="col-md-12 text-center mx-auto">
                 <h1>Acerca de nosotros</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisi vel bibendum bibendum,
-                    mauris sapien bibendum elit, vel bibendum sapien elit eget velit.</p>
+                <p>Somos un pequeño y acogedor negocio local ubicado en el corazón de tu barrio. Nos enorgullece ser tu tienda de confianza, donde podrás encontrar una amplia variedad de productos para satisfacer tus necesidades diarias.</p>
+                <p>En nuestro establecimiento, nos esforzamos por ofrecerte una experiencia de compra única y personalizada. Nuestro amable equipo de empleados está siempre dispuesto a ayudarte y brindarte el mejor servicio, con una sonrisa en el rostro.</p>
+                <p>Desde productos básicos de despensa como abarrotes y alimentos frescos, hasta bebidas, productos de limpieza y más, nos aseguramos de tener todo lo que necesitas en un solo lugar. Además, contamos con una selección de productos locales y artesanales para apoyar a los productores de nuestra comunidad.</p>
+                <p>Valoramos la calidad y la frescura de nuestros productos, por lo que trabajamos con proveedores confiables y realizamos revisiones periódicas para garantizar que cada artículo que encuentres en nuestras estanterías cumpla con nuestros estándares de excelencia.</p>
+                <p>Entendemos la importancia de la comodidad y la conveniencia en tu rutina diaria, por lo que nos esforzamos por mantener nuestros precios competitivos y ofrecerte opciones de pago flexibles. También nos complace brindarte recomendaciones y sugerencias para que encuentres exactamente lo que buscas.</p>
+                <p>Gracias por ser parte de nuestra comunidad y por apoyar a los negocios locales. Te invitamos a que nos visites y descubras todo lo que tenemos preparado para ti. ¡Es un placer atenderte en nuestra tienda!</p>
             </div>
         </div>
     </div>
 
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
+        <div class="container mt-5 pt-5">
+            <div class="row align-items-center">
+                <div class="col-md-12 text-center mx-auto">
                     <ul class="list-inline">
                         <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
                         <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
@@ -123,8 +244,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+
     <!-- myScript -->
-    <script src="./js/script.js"></script>
+    <script src="../js/langding.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe de Ventas</title>
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--dataTable-->
+        <link rel="stylesheet" href="./assets/css-scss/informeDiario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar bg-success">
+            <div class="container-fluid">
+                <a href="./index.html" class="navbar-brand">
+                    <img src="./assets/img/imagen-tunel.jpg" alt="Icono" width="150" height="50">
+                </a>
+                <form class="d-flex" role="search">
+                </form>
+                <div class="dropdown">
+                    <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user-circle" style="color: #ffffff;"></i> Perfil
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Correo</a>
+                        <a class="dropdown-item" href="#">Cambiar contraseña</a>
+                        <a class="dropdown-item" href="#">Cerrar sesión</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <h2>Informe de ventas diarias</h2>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <label for="documento">Tipo de Documento</label><br>
+                            <select id="documento" onchange="sel()">
+                                <option value="">Todos</option>
+                                <option value="Boleta">Boleta</option>
+                                <option value="Factura">Factura</option>
+                            </select>
+                        </div>
+                        <div class="col" id="busqueda">
+                            <label for="input2">Fecha</label><br>
+                            <input type="date" id="input2" name="input2">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <table>
+                            <tbody class="linea">
+                                <td>Importe de las ventas</td>
+                                <td>$142.500</td>
+                            </tbody>
+                            <tbody class="linea">
+                                <td>Impuesto sobre las ventas</td>
+                                <td>$27.075</td>
+                            </tbody>
+                            <tbody >
+                                <td>Total de ventas ventas</td>
+                                <td>$115.425</td>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <table class="table table-striped" id="tabla-ventas">
+                <thead id="thead">
+                    <tr>
+                        <th>Tipo de documento</th>
+                        <th>Hora</th>
+                        <th>Código del producto</th>
+                        <th>Nombre del producto</th>
+                        <th>Número de transacción</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Importe</th>
+                        <th>Impuesto (19%)</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td>Boleta</td>
+                    <td>10:31</td>
+                    <td>1001</td>
+                    <td>Calculadora</td>
+                    <td>2020</td>
+                    <td>Artículo escolar</td>
+                    <td>4000</td>
+                    <td>2</td>
+                    <td>8000</td>
+                    <td>1520</td>
+                    <td>6480</td>
+                </tbody>
+                <tbody>
+                    <td>Factura</td>
+                    <td>10:41</td>
+                    <td>1002</td>
+                    <td>Vasos</td>
+                    <td>2130</td>
+                    <td>Artículo de casa</td>
+                    <td>1000</td>
+                    <td>3</td>
+                    <td>3000</td>
+                    <td>570</td>
+                    <td>2430</td>
+                </tbody>
+                <tbody>
+                    <td>Factura</td>
+                    <td>10:52</td>
+                    <td>1003</td>
+                    <td>Cuaderno</td>
+                    <td>2025</td>
+                    <td>Artículo escolar</td>
+                    <td>1500</td>
+                    <td>3</td>
+                    <td>4500</td>
+                    <td>855</td>
+                    <td>3645</td>
+                </tbody>
+                <tbody>
+                    <td>Boleta</td>
+                    <td>11:11</td>
+                    <td>1004</td>
+                    <td>Teclado</td>
+                    <td>2027</td>
+                    <td>Artículo electronico</td>
+                    <td>8000</td>
+                    <td>2</td>
+                    <td>16000</td>
+                    <td>3040</td>
+                    <td>12960</td>
+                </tbody>
+                <tbody>
+                    <td>Boleta</td>
+                    <td>11:15</td>
+                    <td>1005</td>
+                    <td>Carpeta</td>
+                    <td>2123</td>
+                    <td>Artículo escolar</td>
+                    <td>1000</td>
+                    <td>5</td>
+                    <td>5000</td>
+                    <td>950</td>
+                    <td>4050</td>
+                </tbody>
+                <tbody>
+                    <td>Factura</td>
+                    <td>11:21</td>
+                    <td>1006</td>
+                    <td>Desodorante</td>
+                    <td>4312</td>
+                    <td>Artículo personal</td>
+                    <td>2500</td>
+                    <td>3</td>
+                    <td>7500</td>
+                    <td>1425</td>
+                    <td>6075</td>
+                </tbody>
+                <tbody>
+                    <td>Boleta</td>
+                    <td>11:27</td>
+                    <td>1007</td>
+                    <td>Mochila</td>
+                    <td>2650</td>
+                    <td>Artículo escolar</td>
+                    <td>15000</td>
+                    <td>2</td>
+                    <td>30000</td>
+                    <td>5700</td>
+                    <td>24300</td>
+                </tbody>
+                <tbody>
+                    <td>Boleta</td>
+                    <td>11:33</td>
+                    <td>1008</td>
+                    <td>Reloj</td>
+                    <td>2176</td>
+                    <td>Artículo personal</td>
+                    <td>6000</td>
+                    <td>3</td>
+                    <td>18000</td>
+                    <td>3420</td>
+                    <td>14580</td>
+                </tbody>
+                <tbody>
+                    <td>Boleta</td>
+                    <td>11:39</td>
+                    <td>1009</td>
+                    <td>Lapicera</td>
+                    <td>3131</td>
+                    <td>Artículo escolar</td>
+                    <td>1000</td>
+                    <td>4</td>
+                    <td>4000</td>
+                    <td>760</td>
+                    <td>3240</td>
+                </tbody>
+                <tbody>
+                    <td>Boleta</td>
+                    <td>11:42</td>
+                    <td>1010</td>
+                    <td>Estuche</td>
+                    <td>3871</td>
+                    <td>Artículo escolar</td>
+                    <td>4000</td>
+                    <td>3</td>
+                    <td>12000</td>
+                    <td>2280</td>
+                    <td>9720</td>
+                </tbody>
+                <tbody>
+                    <td>Boleta</td>
+                    <td>11:49</td>
+                    <td>1011</td>
+                    <td>Billetera</td>
+                    <td>5232</td>
+                    <td>Artículo personal</td>
+                    <td>4500</td>
+                    <td>4</td>
+                    <td>18000</td>
+                    <td>3420</td>
+                    <td>14580</td>
+                </tbody>
+                <tbody>
+                    <td>Factura</td>
+                    <td>12:01</td>
+                    <td>1012</td>
+                    <td>Lupa</td>
+                    <td>6512</td>
+                    <td>Artículo escolar</td>
+                    <td>7000</td>
+                    <td>2</td>
+                    <td>14000</td>
+                    <td>2660</td>
+                    <td>11340</td>
+                </tbody>
+                <tbody>
+                    <td>Boleta</td>
+                    <td>12:12</td>
+                    <td>1013</td>
+                    <td>Cartulina</td>
+                    <td>7831</td>
+                    <td>Artículo escolar</td>
+                    <td>500</td>
+                    <td>5</td>
+                    <td>2500</td>
+                    <td>475</td>
+                    <td>2025</td>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>
+<footer class="bg-success">
+    <div class="container">
+        <h5 class="text-center">Bazar el Túnel</h5>
+        <p class="text-center">Porque tu hogar merece lo mejor confía en nosotros</p>
+        <p class="text-center">© 2023 El Túnel SpA</p>
+    </div>
+</footer>
+    <!--Bootstraps-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <!--Jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--dataTable-->
+    
+    <script src="./assets/js/informeDiario.js"></script>
+
+</body>
+
+</html>

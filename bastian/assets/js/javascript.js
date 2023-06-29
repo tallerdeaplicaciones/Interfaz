@@ -85,18 +85,27 @@ function addItemToCart(title, price, imageSrc) {
 }
 
 function updateCartTotal() {
-    var cartItemContainer = document.getElementsByClassName('cart-items')[0]
-    var cartRows = cartItemContainer.getElementsByClassName('cart-row')
-    var total = 0
+    var cartItemContainer = document.getElementsByClassName('cart-items')[0];
+    var cartRows = cartItemContainer.getElementsByClassName('cart-row');
+    var subtotal = 0;
     for (var i = 0; i < cartRows.length; i++) {
-        var cartRow = cartRows[i]
-        var priceElement = cartRow.getElementsByClassName('cart-price')[0]
-        var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
-        var subtotal = parseInt(quantityElement.value) * parseInt(priceElement.innerText)
-        var price = parseFloat(priceElement.innerText.replace('$', ''))
-        var quantity = quantityElement.value
-        total = total + (price * quantity)
+        var cartRow = cartRows[i];
+        var priceElement = cartRow.getElementsByClassName('cart-price')[0];
+        var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0];
+        var price = parseFloat(priceElement.innerText.replace('$', ''));
+        var quantity = quantityElement.value;
+        var rowTotal = price * quantity;
+        subtotal += rowTotal;
     }
-    total = Math.round(total * 100) / 100
-    document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
+    subtotal = Math.round(subtotal);
+
+    var iva = subtotal * 0.19;
+    iva = Math.round(iva);
+
+    var total = subtotal + iva;
+    total = Math.round(total);
+
+    document.getElementsByClassName('cart-subtotal')[0].innerText = '$' + subtotal;
+    document.getElementsByClassName('cart-iva')[0].innerText = '$' + iva;
+    document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total;
 }

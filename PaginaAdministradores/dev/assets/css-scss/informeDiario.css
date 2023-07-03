@@ -20,16 +20,6 @@
     border-bottom: 1px solid;
 }
 
-#fecha {
-    font-weight: bold;
-    text-decoration: aquamarine;
-}
-
-#busqueda {
-    text-align: center;
-    align-items: start;
-}
-
 #totalVenta {
     border: 2px solid green;
     width: 30%;

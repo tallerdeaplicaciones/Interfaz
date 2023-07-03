@@ -1,39 +1,39 @@
-$(document).ready(function(){
+$(document).ready(function () {
     $("#productoForm").validate({
-        rules:{
-            codigoProducto:{
+        rules: {
+            codigoProducto: {
                 required: true,
                 minlength: 3,
                 number: true
             },
-            nombreProducto:{
-                required: true,
-                minlength: 3
-            }, 
-            descripcion:{
+            nombreProducto: {
                 required: true,
                 minlength: 3
             },
-            categoria:{
+            descripcion: {
                 required: true,
                 minlength: 3
             },
-            precio:{
+            categoria: {
+                required: true,
+                minlength: 3
+            },
+            precio: {
                 required: true,
                 number: true
             },
-            inventario:{
+            inventario: {
                 required: true,
                 number: true
             }
         },
-        messages:{
-            codigoProducto:{
+        messages: {
+            codigoProducto: {
                 required: "Debe ingresar un Código de Producto",
                 minlength: "El código debe tener mínimo 3 caracteres",
                 number: "El código debe ser numérico"
             },
-            nombreProducto:{
+            nombreProducto: {
                 required: "Debe ingresar un nombre para el producto",
                 minlength: "El nombre debe tener mínimo 3 caracteres"
             },
@@ -41,18 +41,28 @@ $(document).ready(function(){
                 required: "Debe ingresar una descripción",
                 minlength: "La descripción debe tener mínimo 3 caracteres"
             },
-            categoria:{
+            categoria: {
                 required: "Debe ingresar una categoría",
                 minlength: "La categoría debe tener mínimo 3 caracteres"
             },
-            precio:{
+            precio: {
                 required: "Debe ingresar un precio",
                 number: "El precio debe ser numérico"
             },
-            inventario:{
+            inventario: {
                 required: "Debe ingresar la cantidad en inventario",
                 number: "La cantidad en inventario debe ser numérica"
             }
+        }
+    });
+});
+$(document).ready(function () {
+    $('#myButton').click(function () {
+        $(this).toggleClass('changed');
+        if ($(this).hasClass('changed')) {
+            $(this).text('Cierre de caja');
+        } else {
+            $(this).text('Apertura de caja');
         }
     });
 });

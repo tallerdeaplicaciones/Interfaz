@@ -43,7 +43,6 @@ a {
 
 main {
     background-image: url("../img/17-fondos-de-pantalla-para-pc-de-playas-0.jpg.jpg");
-    filter: blur(1px);
     background-repeat: no-repeat;
     background-position: center;
     min-height: 90vh;
@@ -82,16 +81,11 @@ footer {
     margin: 0px 0px;
 }
 
-/* @keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.1);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-} */
+.changed {
+    background-color: rgba(255, 0, 0, 0.649) !important;
+    color: white !important;
+}
+#myButton{
+    border: solid rgba(0, 0, 0, 0.502) 1px;
+    width: 140px;
+}

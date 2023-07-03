@@ -1,36 +1,41 @@
-$(document).ready(function() {
-    $("#login-button").click(function() {
-      var email = $("#emailRegistro").val();
-      var password = $("#passwordRegistro").val();
+// Lista de usuarios predefinidos
+const usuarios = [
+  { email: 'jefe@gmail.com', password: 'abc.123' },
+  { email: 'vendedor@gmail.com', password: 'abc.123' },
+  // Agrega más usuarios si es necesario
+];
 
-      // Aquí debes implementar la lógica para verificar las credenciales del usuario
-      // Puedes hacer una petición AJAX al servidor o utilizar cualquier otro método de autenticación
 
-      // Ejemplo de lógica de autenticación básica
-      if (email === "vendedor@example.com" && password === "vendedor123") {
-        window.location.href = "vendedor.html";
-      } else if (email === "admin@example.com" && password === "admin123") {
-        window.location.href = "index.html";
-      } else {
-        // Las credenciales no coinciden, muestra un mensaje de error o realiza alguna acción adicional
-        alert("Credenciales inválidas. Inténtalo de nuevo.");
-      }
-    });
+// Obtener referencia al botón de inicio de sesión
+const loginButton = document.getElementById('login-button');
 
-    $("#register-button").click(function() {
-      var userType = $("#userType").val();
+// Agregar controlador de eventos para el clic del botón de inicio de sesión
+loginButton.addEventListener('click', function() {
+  // Obtener los valores ingresados en los campos de email y contraseña
+  const email = document.getElementById('emailRegistro').value;
+  const password = document.getElementById('passwordRegistro').value;
 
-      // Aquí debes implementar la lógica para guardar los datos del usuario en el servidor
-      // Puedes hacer una petición AJAX al servidor para registrar al usuario
-
-      // Después de registrar al usuario, redirige según su tipo
-      if (userType === "vendedor") {
-        window.location.href = "vendedor.html";
-      } else if (userType === "administrador") {
-        window.location.href = "index.html";
-      } else {
-        // Tipo de usuario inválido, muestra un mensaje de error o realiza alguna acción adicional
-        alert("Tipo de usuario inválido. Por favor, selecciona un tipo de usuario válido.");
-      }
-    });
+  // Verificar si las credenciales coinciden con algún usuario de la lista
+  const usuarioEncontrado = usuarios.find(function(usuario) {
+    return usuario.email === email && usuario.password === password;
   });
+
+  if (usuarioEncontrado) {
+    // Inicio de sesión exitoso
+
+    if (email === 'vendedor@gmail.com') {
+      // Redirigir al usuario a ventas.html
+      window.location.href = '../../../PaginaVendedores/ventas.html';
+    } else if (email === 'jefe@gmail.com') {
+      // Redirigir al usuario a informeDiario.html
+      window.location.href = 'informeDiario.html';
+    } else {
+      // Otro tipo de usuario no redirigido específicamente
+      alert('Inicio de sesión exitoso');
+    }
+  } else {
+    // Credenciales inválidas
+    alert('Email o contraseña incorrectos');
+  }
+});
+

@@ -7,6 +7,10 @@
 nav{
     background-color: green;
 }
+nav:hover{
+    color: white;
+
+}
 
 a {
     font-size: 20px;

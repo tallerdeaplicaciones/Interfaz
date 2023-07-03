@@ -1,21 +1,21 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+    background-color: green;
+}
+
 .modal-header h1 {
     text-align: center;
 }
 
 a {
-    font-family: Arial, Helvetica, sans-serif;
-    color: inherit;
+    font-size: 15px;
+    color: white;
     text-decoration: none;
-    font-weight: bold;
-    text-decoration: dashed;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    transition: color 0.3s ease-in-out;
-    animation: pulse 2s infinite;
-    transform: scale(1.1);
-
-
+    text-transform: capitalize;
+    letter-spacing: 1px;
 }
 
 .modal-content {
@@ -45,8 +45,9 @@ main {
     background-image: url("../img/17-fondos-de-pantalla-para-pc-de-playas-0.jpg.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 90vh;
+    min-height: 81vh;
     display: flex;
+    justify-content: center;
     background-size: cover;
 }
 
@@ -85,7 +86,9 @@ footer {
     background-color: rgba(255, 0, 0, 0.649) !important;
     color: white !important;
 }
-#myButton{
+
+#myButton {
+    font-size: 15px;
     border: solid rgba(0, 0, 0, 0.502) 1px;
     width: 140px;
 }

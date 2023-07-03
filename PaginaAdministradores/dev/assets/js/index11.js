@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $("#productoForm").validate({
+    $("#productForm").validate({
         rules: {
             codigoProducto: {
                 required: true,

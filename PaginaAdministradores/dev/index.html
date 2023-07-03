@@ -17,80 +17,99 @@
 
 <body>
     <header>
-        <nav class="navbar bg-success">
-            <div class="container-fluid">
-                <a href="#" class="navbar-brand">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+            <div class="container">
+                <a class="navbar-brand" href="#">
                     <img src="./assets/img/imagen-tunel.jpg" alt="Icono Empresarial" width="150" height="50">
                 </a>
-                <a href="#" data-bs-toggle="modal" data-bs-target="#myModal">Agregar producto</a>
-                <a href="./informeDiario.html">Ventas diarias</a>
-                <a href="./InformeVentas.html">Informe de ventas</a>
-                <button id="myButton" class="btn btn-success">Apertura de caja</button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#myModal">Agregar
+                                producto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./informeDiario.html">Ventas diarias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./InformeVentas.html">Informe de ventas</a>
+                        </li>
+                    </ul>
+                    <button id="myButton" class="btn btn-success ms-lg-2">Apertura de caja</button>
+                </div>
             </div>
         </nav>
     </header>
     <main>
-    <div class="container">
-        <div class="row lista">
-            <div class="col-2"></div>
-            <div class="col-10"><div class="row">
-                <!-- Modal -->
-                <div id="myModal" class="modal fade" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Formulario</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form action="" id="productoForm">
-                                    <fieldset>
-                                        <legend>Datos de los productos</legend>
-                                        <div>
-                                            <label style="width: 150px;">Codigo del producto</label>
-                                            <input type="text" id="codigoProducto" name="codigoProducto">
-                                        </div>
-                                        <br>
-                                        <div>
-                                            <label style="width: 150px;">Nombre del producto</label>
-                                            <input type="text" id="nombreProducto" name="nombreProducto">
-                                        </div>
-                                        <br>
-                                        <div>
-                                            <label style="width: 150px;">Descripción</label>
-                                            <input type="text" id="descripcion" name="descripcion">
-                                        </div>
-                                        <br>
-                                        <div>
-                                            <label style="width: 150px;">Categoría</label>
-                                            <input type="text" id="categoria" name="categoria">
-                                        </div>
-                                        <br>
-                                        <div>
-                                            <label style="width: 150px;">Precio</label>
-                                            <input type="text" id="precio" name="precio">
-                                        </div>
-                                        <br>
-                                        <div>
-                                            <label style="width: 150px;">Inventario</label>
-                                            <input type="text" id="inventario" name="inventario">
-                                        </div>
-                                    </fieldset>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                <button type="button" class="btn btn-primary" id="btnIngresar">Ingresar</button>
+        <div class="container">
+            <div class="row lista">
+                <div class="col-2"></div>
+                <div class="col-10">
+                    <div class="row">
+                        <!-- Modal -->
+                        <div id="myModal" class="modal fade" data-backdrop="static" tabindex="-1" role="dialog"
+                            aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Formulario</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="" id="productForm">
+                                            <fieldset>
+                                                <legend>Datos de los productos</legend>
+                                                <div>
+                                                    <label style="width: 150px;">Codigo del producto</label>
+                                                    <input type="text" id="codigoProducto" name="codigoProducto">
+                                                </div>
+                                                <br>
+                                                <div>
+                                                    <label style="width: 150px;">Nombre del producto</label>
+                                                    <input type="text" id="nombreProducto" name="nombreProducto">
+                                                </div>
+                                                <br>
+                                                <div>
+                                                    <label style="width: 150px;">Descripción</label>
+                                                    <input type="text" id="descripcion" name="descripcion">
+                                                </div>
+                                                <br>
+                                                <div>
+                                                    <label style="width: 150px;">Categoría</label>
+                                                    <input type="text" id="categoria" name="categoria">
+                                                </div>
+                                                <br>
+                                                <div>
+                                                    <label style="width: 150px;">Precio</label>
+                                                    <input type="text" id="precio" name="precio">
+                                                </div>
+                                                <br>
+                                                <div>
+                                                    <label style="width: 150px;">Inventario</label>
+                                                    <input type="text" id="inventario" name="inventario">
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cerrar</button>
+                                        <button type="button" class="btn btn-primary" id="btnIngresar">Ingresar</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+                        <br>
+
                     </div>
                 </div>
-                
-            <br>
-            
             </div>
-        </div>
-    </div>
     </main>
     <footer class="bg-success">
         <div class="container">
@@ -104,7 +123,7 @@
         crossorigin="anonymous"></script>
     <script src=""></script>
     <script src="PaginaAdministradores/dev/js/index11.js"></script>
-    <script src="../js/jquery.js"></script>
+    <script src="./assets/js/jquery.js"></script>
 </body>
 
 </html>

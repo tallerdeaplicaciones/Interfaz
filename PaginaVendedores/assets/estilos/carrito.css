@@ -1,3 +1,10 @@
+.navbar{
+    border: 1px solid  rgb(25, 135, 84);
+}
+
+.bannerimage{
+    background-color: #169E85;
+}
 .shop-item {
     margin: 30px;
 }
@@ -156,4 +163,8 @@ input[type=number] {
 
 #tablaproductos{
     padding: 15px;
+}
+
+footer{
+    background-color: rgb(25, 135, 84);
 }

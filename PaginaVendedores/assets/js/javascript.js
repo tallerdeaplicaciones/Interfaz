@@ -73,11 +73,18 @@ function addItemToCart(title, price, imageSrc) {
             <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
             <span class="cart-item-title">${title}</span>
         </div>
-        <span class="cart-price cart-column">${price}</span>
+        <div class="cart-price cart-column">
+            <span class="cart-price cart-column">${price}</span>
+        </div>
         <div class="cart-quantity cart-column">
             <input class="cart-quantity-input" type="number" value="1">
-            <button class="btn btn-danger" type="button">Eliminar</button>
+        </div>
+        <div class="cart-totalRow  cart-column">
+        </div>
+        <div class="cart-Delete cart-column">
+        <button class="btn btn-danger me-3" type="button">Eliminar</button>
         </div>`
+
     cartRow.innerHTML = cartRowContents
     cartItems.append(cartRow)
     cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
@@ -96,6 +103,7 @@ function updateCartTotal() {
         var quantity = quantityElement.value;
         var rowTotal = price * quantity;
         subtotal += rowTotal;
+        cartRow.getElementsByClassName('cart-totalRow')[0].innerText = '$' + rowTotal;
     }
     subtotal = Math.round(subtotal);
 

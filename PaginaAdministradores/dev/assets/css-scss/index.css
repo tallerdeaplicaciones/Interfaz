@@ -110,8 +110,8 @@ footer {
     position: absolute;
     color: white;
     left: 0;
-    bottom:-12px ;
-    transition: 0.4s ease-out;
+    bottom:-1px ;
+    transition: 0.7s ease-out;
 }
 .navbar ul li:hover::before{
     width: 100%;

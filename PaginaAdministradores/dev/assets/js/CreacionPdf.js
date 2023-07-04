@@ -598,7 +598,7 @@ document.addEventListener("DOMContentLoaded", function () {
             orientationLandscape: false,
             compress: true,
             logo: {
-                src: "",
+                src: "https://raw.githubusercontent.com/tallerdeaplicaciones/Interfaz/main/PaginaAdministradores/dev/assets/img/imagen-tunel.jpg",
                 type: 'jpg',
                 width: 53.33,
                 height: 26.66,

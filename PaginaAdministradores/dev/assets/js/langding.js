@@ -25,10 +25,10 @@ loginButton.addEventListener('click', function() {
 
     if (email === 'vendedor@gmail.com') {
       // Redirigir al usuario a ventas.html
-      window.location.href = '../../../PaginaVendedores/ventas.html';
+      window.location.href = '../../PaginaVendedores/ventas.html';
     } else if (email === 'jefe@gmail.com') {
       // Redirigir al usuario a informeDiario.html
-      window.location.href = 'informeDiario.html';
+      window.location.href = 'index.html';
     } else {
       // Otro tipo de usuario no redirigido específicamente
       alert('Inicio de sesión exitoso');

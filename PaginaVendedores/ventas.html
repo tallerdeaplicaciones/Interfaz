@@ -198,23 +198,7 @@
         </div>
     </footer>
 
-    <!-- Modal -->
-    <div class="modal" tabindex="-1" id="exitoModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Bazar El Túnel</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>El producto ha sido agregado exitosamente al carrito. Por favor continue su compra.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <!-- Modal -->
     <div class="modal fade" id="boleta" tabindex="-1" aria-labelledby="generarBoleta" aria-hidden="true">
@@ -253,7 +237,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Guardar</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Guardar</button>
                 </div>
             </div>
         </div>
@@ -307,28 +291,43 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p class="fw-bold">Bazar: El Túnel</p>
-                    <div class="mb-3">
-                        <label for="razonSocialFactura" class="form-label">Razón Social del Cliente</label>
-                        <input type="text" class="form-control" id="razonSocialFactura" readonly>
+                    <div class="d-flex justify-content-center mb-3"><h4>Bazar: El Túnel</h4></div>
+                    <div class="container">
+                        <h5>Datos del Cliente</h5>
+                        <h6>Razón Social: Carlo y Asociados </h6>
+                        <h6>RUT: 9.456.323-5</h6>
+                        <h6>Giro: Vendedor Productos de Gaming</h6>
+                        <h6>Direccion: Tucapel 2345</h6>
+                        <p id="modal-date">10/07/2023</p>
                     </div>
-                    <div class="mb-3">
-                        <label for="rutFactura" class="form-label">RUT del Cliente</label>
-                        <input type="text" class="form-control" id="rutFactura" readonly>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Producto</th>
+                                <th scope="col">Cantidad</th>
+                            </tr>
+                        </thead>
+                        <tbody id="modal-cart-items">
+                            <tr>
+                                <td>Bolsa de Basura Virutex</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Lavazolas Ecológico Fuzol</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Detergente Liquido Ariel</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="text-end">
+                        <h5>SubTotal: <span id="modal-cart-total"> $11.970</span></h5>
+                        <h5>IVA: <span id="modal-cart-total"> $2.274</span></h5>
+                        <h5>Total: <span id="modal-cart-total"> $14.244</span></h5>   
                     </div>
-                    <div class="mb-3">
-                        <label for="giroFactura" class="form-label">Giro</label>
-                        <input type="text" class="form-control" id="giroFactura" readonly>
-                    </div>
-                    <div class="mb-3">
-                        <label for="direccionFactura" class="form-label">Dirección</label>
-                        <input type="text" class="form-control" id="direccionFactura" readonly>
-                    </div>
-                    <div class="mb-3">
-                        <label for="descripcion" class="form-label">Descripción de la Compra</label>
-                        <textarea class="form-control" id="descripcion"></textarea>
-                    </div>
-                </div>
+                </div>               
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Guardar Factura</button>

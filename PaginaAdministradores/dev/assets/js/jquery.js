@@ -1,10 +1,10 @@
 $(document).ready(function(){
-    $("#productoForm").validate({
+    $("#productForm").validate({
     });
 
     $('#btnIngresar').click(function(e) {
         e.preventDefault(); //
-        if ($('#productoForm').valid()) {
+        if ($('#productForm').valid()) {
             alert('El formulario ha sido enviado exitosamente!');
             window.location.href = '';
         }

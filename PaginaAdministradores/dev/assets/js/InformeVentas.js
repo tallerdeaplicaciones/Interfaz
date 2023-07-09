@@ -1,14 +1,13 @@
 function filtrarPorVendedor() {
     var vendedorSeleccionado = document.getElementById("vendedor").value;
     var filas = document.querySelectorAll("#tablaVentas tbody tr");
-    
-    filas.forEach(function(fila) {
-        var vendedorFila = fila.cells[1].textContent.trim().toLowerCase();
-        if (vendedorFila !== vendedorSeleccionado && vendedorSeleccionado !== "") {
-            fila.style.display = "none";
-        } else {
-            fila.style.display = "";
-        }
-    });
-}
 
+    for (var i = 0; i < filas.length; i++) {
+        var vendedor = filas[i].querySelector("td:nth-child(3)").textContent;
+        if (vendedor === vendedorSeleccionado || vendedorSeleccionado === "") {
+            filas[i].style.display = "";
+        } else {
+            filas[i].style.display = "none";
+        }
+    }
+}

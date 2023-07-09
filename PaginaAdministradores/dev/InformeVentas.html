@@ -1,40 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informe de Ventas</title>
-    <link rel="stylesheet" type="text/css" href="../css-scss/InformeVentas.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
-    <script src="../dev/assets/js/InformeVentas.js"></script>
-
-
 </head>
 
 <body>
     <header>
-        <nav class="navbar bg-success">
-            <div class="container-fluid">
-                <a href="../dev/index.html" class="navbar-brand">
-                    <img src="../dev/assets/img/imagen-tunel.jpg" alt="Icono" width="150" height="50">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="./assets/img/imagen-tunel.jpg" alt="Icono Empresarial" width="150" height="50">
                 </a>
-                <form class="d-flex" role="search">
-                </form>
-                <div class="dropdown">
-                    <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-user-circle" style="color: #ffffff;"></i> Perfil
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Correo</a>
-                        <a class="dropdown-item" href="#">Cambiar contraseña</a>
-                        <a class="dropdown-item" href="#">Cerrar sesión</a>
-                    </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./informeDiario.html">Ventas diarias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./InformeVentas.html">Informe de ventas</a>
+                        </li>
+                    </ul>
+                    <a href="landing.html" class="btn btn-danger ms-lg-2">Cerrar Sesión</a>
                 </div>
             </div>
         </nav>
@@ -83,7 +85,7 @@
                     <td>145.000</td>
                     <td>27.550</td>
                     <td>172.550</td>
-                    <td><a href="" id="Dia1">ver mas</a></td>
+                    <td><a href="" id="Dia1">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>2/06/2023</td>
@@ -94,7 +96,7 @@
                     <td>170.000</td>
                     <td>32.300</td>
                     <td>202.300</td>
-                    <td><a href="" id="Dia2">ver mas</a></td>
+                    <td><a href="" id="Dia2">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>3/06/2023</td>
@@ -105,7 +107,7 @@
                     <td>75.000</td>
                     <td>14.250</td>
                     <td>89.250</td>
-                    <td><a href="" id="Dia3">ver mas</a></td>
+                    <td><a href="" id="Dia3">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>4/06/2023</td>
@@ -116,7 +118,7 @@
                     <td>125.000</td>
                     <td>23.750</td>
                     <td>148.750</td>
-                    <td><a href="" id="Dia4">ver mas</a></td>
+                    <td><a href="" id="Dia4">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>5/06/2023</td>
@@ -127,7 +129,7 @@
                     <td>90.000</td>
                     <td>17.100</td>
                     <td>107.100</td>
-                    <td><a href="" id="Dia5">ver mas</a></td>
+                    <td><a href="" id="Dia5">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>6/06/2023</td>
@@ -138,7 +140,7 @@
                     <td>105.000</td>
                     <td>19.950</td>
                     <td>124.950</td>
-                    <td><a href="" id="Dia6">ver mas</a></td>
+                    <td><a href="" id="Dia6">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>7/06/2023</td>
@@ -149,7 +151,7 @@
                     <td>165.000</td>
                     <td>31.350</td>
                     <td>196.350</td>
-                    <td><a href="" id="Dia7">ver mas</a></td>
+                    <td><a href="" id="Dia7">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>8/06/2023</td>
@@ -160,7 +162,7 @@
                     <td>135.000</td>
                     <td>25.650</td>
                     <td>160.650</td>
-                    <td><a href="" id="Dia8">ver mas</a></td>
+                    <td><a href="" id="Dia8">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>9/06/2023</td>
@@ -171,7 +173,7 @@
                     <td>60.000</td>
                     <td>11.400</td>
                     <td>71.400</td>
-                    <td><a href="" id="Dia9">ver mas</a></td>
+                    <td><a href="" id="Dia9">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>10/06/2023</td>
@@ -182,7 +184,7 @@
                     <td>235.000</td>
                     <td>44.650</td>
                     <td>279.650</td>
-                    <td><a href="" id="Dia10">ver mas</a></td>
+                    <td><a href="" id="Dia10">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>11/06/2023</td>
@@ -193,7 +195,7 @@
                     <td>195.000</td>
                     <td>37050</td>
                     <td>232.050</td>
-                    <td><a href="" id="Dia11">ver mas</a></td>
+                    <td><a href="" id="Dia11">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>12/06/2023</td>
@@ -204,7 +206,7 @@
                     <td>325.000</td>
                     <td>61.750</td>
                     <td>386.750</td>
-                    <td><a href="" id="Dia12">ver mas</a></td>
+                    <td><a href="" id="Dia12">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>13/06/2023</td>
@@ -215,7 +217,7 @@
                     <td>145.000</td>
                     <td>27.550</td>
                     <td>172.550</td>
-                    <td><a href="" id="Dia13">ver mas</a></td>
+                    <td><a href="" id="Dia13">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>14/06/2023</td>
@@ -226,7 +228,7 @@
                     <td>75.000</td>
                     <td>14.250</td>
                     <td>89.250</td>
-                    <td><a href="" id="Dia14">ver mas</a></td>
+                    <td><a href="" id="Dia14">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>15/06/2023</td>
@@ -237,7 +239,7 @@
                     <td>75.000</td>
                     <td>14.250</td>
                     <td>89.250</td>
-                    <td><a href="" id="Dia15">ver mas</a></td>
+                    <td><a href="" id="Dia15">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>16/06/2023</td>
@@ -248,7 +250,7 @@
                     <td>75.000</td>
                     <td>14.250</td>
                     <td>89.250</td>
-                    <td><a href="" id="Dia16">ver mas</a></td>
+                    <td><a href="" id="Dia16">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>17/06/2023</td>
@@ -259,7 +261,7 @@
                     <td>75.000</td>
                     <td>14.250</td>
                     <td>89.250</td>
-                    <td><a href="" id="Dia17">ver mas</a></td>
+                    <td><a href="" id="Dia17">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>18/06/2023</td>
@@ -270,7 +272,7 @@
                     <td>75.000</td>
                     <td>14.250</td>
                     <td>89.250</td>
-                    <td><a href="" id="Dia18">ver mas</a></td>
+                    <td><a href="" id="Dia18">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>19/06/2023</td>
@@ -281,7 +283,7 @@
                     <td>75.000</td>
                     <td>14.250</td>
                     <td>89.250</td>
-                    <td><a href="" id="Dia19">ver mas</a></td>
+                    <td><a href="" id="Dia19">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>20/06/2023</td>
@@ -292,7 +294,7 @@
                     <td>75.000</td>
                     <td>14.250</td>
                     <td>89.250</td>
-                    <td><a href="" id="Dia20">ver mas</a></td>
+                    <td><a href="" id="Dia20">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>21/06/2023</td>
@@ -303,7 +305,7 @@
                     <td>75.000</td>
                     <td>14.250</td>
                     <td>89.250</td>
-                    <td><a href="" id="Dia21">ver mas</a></td>
+                    <td><a href="" id="Dia21">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>22/06/2023</td>
@@ -314,7 +316,7 @@
                     <td>75.000</td>
                     <td>14.250</td>
                     <td>89.250</td>
-                    <td><a href="" id="Dia22">ver mas</a></td>
+                    <td><a href="" id="Dia22">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>23/06/2023</td>
@@ -325,7 +327,7 @@
                     <td>75.000</td>
                     <td>14.250</td>
                     <td>89.250</td>
-                    <td><a href="" id="Dia23">ver mas</a></td>
+                    <td><a href="" id="Dia23">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>24/06/2023</td>
@@ -336,7 +338,7 @@
                     <td>75.000</td>
                     <td>14.250</td>
                     <td>89.250</td>
-                    <td><a href="" id="Dia24">ver mas</a></td>
+                    <td><a href="" id="Dia24">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>25/06/2023</td>
@@ -347,7 +349,7 @@
                     <td>75.000</td>
                     <td>14.250</td>
                     <td>89.250</td>
-                    <td><a href="" id="Dia25">ver mas</a></td>
+                    <td><a href="" id="Dia25">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>26/06/2023</td>
@@ -358,7 +360,7 @@
                     <td>75.000</td>
                     <td>14.250</td>
                     <td>89.250</td>
-                    <td><a href="" id="Dia26">ver mas</a></td>
+                    <td><a href="" id="Dia26">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>27/06/2023</td>
@@ -369,7 +371,7 @@
                     <td>75.000</td>
                     <td>14.250</td>
                     <td>89.250</td>
-                    <td><a href="" id="Dia27">ver mas</a></td>
+                    <td><a href="" id="Dia27">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>28/06/2023</td>
@@ -380,7 +382,7 @@
                     <td>75.000</td>
                     <td>14.250</td>
                     <td>89.250</td>
-                    <td><a href="" id="Dia28">ver mas</a></td>
+                    <td><a href="" id="Dia28">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>29/06/2023</td>
@@ -391,7 +393,7 @@
                     <td>75.000</td>
                     <td>14.250</td>
                     <td>89.250</td>
-                    <td><a href="" id="Dia29">ver mas</a></td>
+                    <td><a href="" id="Dia29">Ver más</a></td>
                 </tr>
                 <tr>
                     <td>30/06/2023</td>
@@ -402,7 +404,7 @@
                     <td>75.000</td>
                     <td>14.250</td>
                     <td>89.250</td>
-                    <td><a href="" id="Dia30">ver mas</a></td>
+                    <td><a href="" id="Dia30">Ver más</a></td>
                 </tr>
             </tbody>
         </table>
@@ -415,13 +417,13 @@
     </div>
 </footer>
 
-    <link rel="stylesheet" type="text/css" href="../dev/assets/css-scss/InformeVentas.css">
-    
 
+    
+    <link rel="stylesheet" type="text/css" href="../dev/assets/css-scss/InformeVentas.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
     <script src="https://unpkg.com/jspdf-invoice-template@1.4.0/dist/index.js"></script>
-    <script src="../dev/assets/js/CreacionPdf.js"></script>
-    <script src="../dev/assets/js/InformeVentas.js"></script>
+    <script src="assets/js/CreacionPdf.js"></script>
+    <script src="assets/js/InformeVentas.js"></script>
 
 </body>
 

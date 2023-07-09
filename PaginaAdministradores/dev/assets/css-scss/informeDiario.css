@@ -4,16 +4,20 @@
     margin: 0;
 }
 
-.navbar {
-    list-style: none;
-    padding: 0;
+nav{
+    background-color: green;
+}
+nav:hover{
+    color: white;
+
 }
 
-.navbar a {
-    display: inline-block;
-    /* Estilo y color del borde */
-    padding-right: 10px;
-    /* Espacio entre elementos */
+a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: 1px;
 }
 
 .linea {
@@ -75,11 +79,11 @@ footer {
     font-weight: bold;
 }
 
-h2 {
+/* h2 {
     color: #333;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
 
-}
+} */

@@ -26,32 +26,27 @@
 </head>
 
 <body class="bg-green">
-    <header class="container-fluid">
+    <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-success">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="./assets/img/logo.jpeg" alt="" style="max-width: 100px;" class="img-fluid mx-auto">
+                    <img src="./assets/img/imagen-tunel.jpg" alt="Icono Empresarial" width="150" height="50">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal"
                                 data-bs-target="#loginModal">Iniciar sesion</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-bs-toggle="modal"
-                                data-bs-target="#registerModal">Registrate</a>
+                            <a class="nav-link" href="#">Conocer más</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Conocer mas</a>
-
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Testimonios</a>
+                            <a class="nav-link" href="#">Nuestro equipo</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#nosotros">Acerca de nosotros</a>
@@ -62,7 +57,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contacto</a>
                         </li>
-
                     </ul>
                 </div>
             </div>
@@ -95,45 +89,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Modal de Registro -->
-    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="registerModalLabel">Registro</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- Formulario de registro -->
-                    <form>
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre">
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Ingresa tu email">
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="password"
-                                placeholder="Ingresa tu contraseña">
-                        </div>
-                        <div class="mb-3">
-                            <label for="userType" class="form-label">Tipo de usuario</label>
-                            <select class="form-control" id="userType">
-                              <option value="vendedor">Vendedor</option>
-                              <option value="administrador">Administrador</option>
-                            </select>
-                        </div>
-                        <button type="button" id="register-button" class="btn btn-primary">Registrarse</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="container text-center pt-5">
         <h1>Bienvenido</h1>
     </div>

@@ -1,8 +1,37 @@
 * {
-    font-family:sans-serif;
-    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
+/* navbars rules */
+
+nav{
+    background-color: green;
+}
+nav:hover{
+    color: white;
+
+}
+
+a {
+    font-size: 20px !important;
+    color: white !important;
+    text-decoration: none !important;
+    text-transform: capitalize !important;
+    letter-spacing: 1px !important;
+}
+.container #bienvenida{
+    padding-top:100px ;
+    text-align: center;
+    font-style: oblique;
+    font-size: 30px;
+}
+.container .mensaje{
+    text-align: justify;
+    font-style: oblique;
+    font-size: 25px;
+}
 .testimonial-image {
     max-width: 300px;
     height: auto;
@@ -37,15 +66,13 @@
     color: #888;
 }
 
-.social-icons {
-    font-size: 24px;
-    /* Ajusta el tamaño de los íconos según tus necesidades */
-    color: black;
-    /* Cambia el color de los íconos a negro */
-}
 
-.social-icons a {
-    color: black !important;
+footer {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px 0px;
 }
 
 body {
@@ -55,4 +82,18 @@ body {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     filter: invert(100%) !important;
+}
+
+/* modals */
+
+.modal-content {
+    background-color: rgb(117, 166, 31);
+}
+
+.modal-content legend, .modal-content h1{
+    text-align: center;
+}
+
+.modal-body {
+    font-weight: bold;
 }

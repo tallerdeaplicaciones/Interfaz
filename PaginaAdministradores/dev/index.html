@@ -6,19 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- jquery validate -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <!-- mi styles -->
     <link rel="stylesheet" href="./assets/css-scss/index.css">
+    <!-- Font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- icono pestaña -->
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    
     <script src="./assets/js/index11.js"></script>
     <script src="PaginaAdministradores/assets/js/jquery.js"></script>
 </head>
 
-<body>
+<body class="bg-green">
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-            <div class="container">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img src="./assets/img/imagen-tunel.jpg" alt="Icono Empresarial" width="150" height="50">
                 </a>
@@ -32,6 +42,52 @@
                             <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#myModal">Agregar
                                 producto</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-toggle="modal"
+                                data-bs-target="#registerModal">Registrate</a>
+                        </li>
+                        <!-- Modal de Registro -->
+                        <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="registerModalLabel">Registro</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- Formulario de registro -->
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="name" class="form-label">Nombre</label>
+                                                <input type="text" class="form-control" id="name"
+                                                    placeholder="Ingresa tu nombre">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="email" class="form-label">Email</label>
+                                                <input type="email" class="form-control" id="email"
+                                                    placeholder="Ingresa tu email">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="password" class="form-label">Contraseña</label>
+                                                <input type="password" class="form-control" id="password"
+                                                    placeholder="Ingresa tu contraseña">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="userType" class="form-label">Tipo de usuario</label>
+                                                <select class="form-control" id="userType">
+                                                    <option value="vendedor">Vendedor</option>
+                                                    <option value="administrador">Administrador</option>
+                                                </select>
+                                            </div>
+                                            <button type="button" id="register-button"
+                                                class="btn btn-primary">Registrarse</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <li class="nav-item">
                             <a class="nav-link" href="./informeDiario.html">Ventas diarias</a>
                         </li>
@@ -52,8 +108,10 @@
                 <div class="col">
                     <div class="row ">
                         <p id="bienvenida">"Encuentra todo lo que necesitas en el corazón del barrio".</p>
-                        <p class="mensaje">Recordemos los 15 años de historia que hemos construido en está hermosa ciudad, seguimos y seguiremos creciendo juntos.</p>
-                        <p class="mensaje">Eres muy importante para nosotros, gracias por ayudarnos en el crecimiento de este negocio. Te queremos :)</p>
+                        <p class="mensaje">Recordemos los 15 años de historia que hemos construido en está hermosa
+                            ciudad, seguimos y seguiremos creciendo juntos.</p>
+                        <p class="mensaje">Eres muy importante para nosotros, gracias por ayudarnos en el crecimiento de
+                            este negocio. Te queremos :)</p>
                         <div class="iconos">
                             <img src="./assets/img/icono1.png" alt="">
                             <img src="./assets/img/icono2.png" alt="">
@@ -113,14 +171,24 @@
                                 </div>
                             </div>
                         </div>
-
                         <br>
-
                     </div>
                 </div>
             </div>
     </main>
-    <footer class="bg-success">
+    <div class="container-fluid mt-5 pt-5 bg-success">
+        <div class="row align-items-center">
+            <div class="col-md-12 text-center mx-auto">
+                <ul class="list-inline social-icons">
+                    <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fab fa-facebook"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-success pb-4">
         <div class="container">
             <h5 class="text-center">Bazar el Túnel</h5>
             <p class="text-center">Porque tu hogar merece lo mejor confía en nosotros</p>

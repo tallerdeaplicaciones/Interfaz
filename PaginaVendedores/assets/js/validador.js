@@ -43,6 +43,9 @@ $(document).ready(function(){
                 required: "Debe ingresar una dirección",
                 maxlength: "La dirección debe tener máximo 40 caracteres"
             } 
+        },
+        onfocusout: function (element) {
+            $(element).valid();
         }
     });
 
@@ -52,3 +55,13 @@ $(document).ready(function(){
         }
     });
 });
+
+$(document).ready(function() {
+    $("#btnGuardar").click(function() {
+        if ($("#formularioRegistroCliente").valid()) {
+            $("#registroCliente").modal("hide");
+            $("#generarFactura").modal("show");
+        }
+    });
+});
+

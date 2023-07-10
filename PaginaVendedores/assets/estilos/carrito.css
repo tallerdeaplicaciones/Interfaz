@@ -180,3 +180,15 @@ footer {
 .social-icons li i {
     color: white;
 }
+
+label.error {
+    color: red;
+    display: block;
+    left: 145px
+}
+
+input.error {
+    border: 1px solid red;
+    font-weight: 300;
+    color: red;
+}

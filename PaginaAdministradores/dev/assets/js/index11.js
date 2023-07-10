@@ -134,15 +134,5 @@ $(document).ready(function () {
     });
 });
 
-$(document).ready(function () {
-    $('#btnRegistrar').click(function () {
-        $(this).toggleClass('changed');
-        if ($(this).hasClass('changed')) {
-            $(this).text('Cierre de registro');
-        } else {
-            $(this).text('Registrar');
-        }
-    });
-});
 
 

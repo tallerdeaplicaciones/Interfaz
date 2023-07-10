@@ -33,4 +33,9 @@ $(document).ready(function(){
             } 
         }
     });
+    $("#generarFactura").on("click", function(e) {
+        if (!$("#formularioRegistroCliente").valid()) {
+            e.preventDefault(); // Evita que se ejecute la acción del botón
+        }
+    });
 });

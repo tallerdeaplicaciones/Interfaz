@@ -9,23 +9,29 @@
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <!-- CSS -->
     <link href="assets/estilos/carrito.css" rel="stylesheet">
-    <!-- jquery
+
+    <!-- jquery-->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
-        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script> -->
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <!-- VALIDATOR -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <!-- Font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
     <!-- CDN CSS DATATABLES -->
     <link rel="stylesheet" href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
     <!-- <script src="//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script> -->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <!-- VALIDATOR -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script> -->
+
+
     <title>Página de Ventas</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="fixed-top navbar navbar-expand-lg navbar-success bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="#top-up">
                 <img src="../paginaAdministradores/dev/assets/img/logo.jpeg" alt="" style="max-width: 100px;"
                     class="img-fluid mx-auto">
             </a>
@@ -43,7 +49,7 @@
             </div>
         </div>
     </nav>
-    <header class="py-5 bannerimage">
+    <header class="py-5 bannerimage bg-success" id="top-up">
         <div class="container px-4 px-lg-5 my-5">
             <div class="text-center text-white">
                 <h1 class="display-4 fw-bolder">Bazar El Túnel</h1>
@@ -87,7 +93,7 @@
                 <button type="button" class="btn btn-success" data-bs-toggle="modal"
                     data-bs-target="#boleta">Boleta</button>
                 <button class="btn btn-warning  " type="button" data-bs-toggle="modal"
-                data-bs-target="#registroCliente">Factura</button>
+                    data-bs-target="#registroCliente">Factura</button>
             </div>
 
         </div>
@@ -189,20 +195,7 @@
             </tbody>
         </table>
     </div>
-
-
-    <!-- FOOTER-->
-    <footer class="py-4  mt-4">
-        <div class="container">
-            <h5 class="text-center text-white">Bazar el Túnel</h5>
-            <p class="m-0 text-center text-white">Porque tu hogar merece lo mejor confía en nosotros</p>
-            <p class="m-0 text-center text-white">&copy; 2023 El Túnel SpA</p>
-        </div>
-    </footer>
-
-
-
-    <!-- Modal -->
+    <!-- Modal Boleta-->
     <div class="modal fade" id="boleta" tabindex="-1" aria-labelledby="generarBoleta" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -246,43 +239,46 @@
     </div>
 
 
-<!-- Modal Registro de Cliente -->
-<div class="modal fade" id="registroCliente" tabindex="-1" aria-labelledby="registroClienteLabel"
-    aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="registroClienteLabel">Registro de Cliente</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form id="formularioRegistroCliente">
-                    <div class="mb-3">
-                        <label for="razonSocial" class="form-label">Razón Social del Cliente</label>
-                        <input type="text" class="form-control" id="razonSocial" name="razonSocial">
-                    </div>
-                    <div class="mb-3">
-                        <label for="rut" class="form-label">RUT del Cliente</label>
-                        <input type="text" class="form-control" id="rut" name="rut">
-                    </div>
-                    <div class="mb-3">
-                        <label for="giro" class="form-label">Giro</label>
-                        <input type="text" class="form-control" id="giro" name="giro">
-                    </div>
-                    <div class="mb-3">
-                        <label for="direccion" class="form-label">Dirección</label>
-                        <input type="text" class="form-control" id="direccion" name="direccion">
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                    data-bs-target="#generarFactura">Guardar</button>
+    <!-- Modal Registro de Cliente FACTURA -->
+    <div class="modal fade" id="registroCliente" tabindex="-1" aria-labelledby="registroClienteLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registroClienteLabel">Registro de Cliente</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formularioRegistroCliente">
+                        <div class="mb-3">
+                            <label for="razonSocial" class="form-label">Razón Social del Cliente</label>
+                            <input type="text" class="form-control" id="razonSocial" name="razonSocial">
+                        </div>
+                        <div class="mb-3">
+                            <label for="rut" class="form-label">RUT del Cliente</label>
+                            <input type="text" class="form-control" id="rut" name="rut">
+                        </div>
+                        <div class="mb-3">
+                            <label for="giro" class="form-label">Giro</label>
+                            <input type="text" class="form-control" id="giro" name="giro">
+                        </div>
+                        <div class="mb-3">
+                            <label for="direccion" class="form-label">Dirección</label>
+                            <input type="text" class="form-control" id="direccion" name="direccion">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Cerrar
+                    </button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#generarFactura">
+                        Guardar
+                    </button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
     <!-- Modal Generar Factura -->
     <div class="modal fade" id="generarFactura" tabindex="-1" aria-labelledby="generarFacturaLabel" aria-hidden="true">
@@ -293,7 +289,9 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="d-flex justify-content-center mb-3"><h4>Bazar: El Túnel</h4></div>
+                    <div class="d-flex justify-content-center mb-3">
+                        <h4>Bazar: El Túnel</h4>
+                    </div>
                     <div class="container">
                         <h5>Datos del Cliente</h5>
                         <h6>Razón Social: Carlo y Asociados </h6>
@@ -327,33 +325,49 @@
                     <div class="text-end">
                         <h5>SubTotal: <span id="modal-cart-total"> $11.970</span></h5>
                         <h5>IVA: <span id="modal-cart-total"> $2.274</span></h5>
-                        <h5>Total: <span id="modal-cart-total"> $14.244</span></h5>   
+                        <h5>Total: <span id="modal-cart-total"> $14.244</span></h5>
                     </div>
-                </div>               
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Guardar Factura</button>
                 </div>
+                
+                
             </div>
         </div>
     </div>
-
+    <div class="container-fluid mt-5 pt-5 bg-success" id="fab">
+        <div class="row align-items-center">
+            <div class="col-md-12 text-center mx-auto">
+                <ul class="list-inline social-icons">
+                    <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fab fa-facebook"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-success pb-4">
+        <div class="container">
+            <h5 class="text-center">Bazar el Túnel</h5>
+            <p class="text-center">Porque tu hogar merece lo mejor confía en nosotros</p>
+            <p class="text-center">© 2023 El Túnel SpA</p>
+        </div>
+    </footer>
 </body>
 <!-- jquery -->
-<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script> -->
+<!-- VALIDATOR -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script> -->
 <!-- Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <!-- CDN CSS DATATABLES -->
 <script src="//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-<!-- VALIDATOR -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 <!-- Tu archivo de validador.js -->
-<script src="assets/js/validador.js"></script>
+<script src="./assets/js/validador.js"></script>
 <!-- Tu archivo de javascript.js -->
-<script src="assets/js/javascript.js" async></script>
+<script src="./assets/js/javascript.js"></script>
 <script>
     $(document).ready(function () {
         let table = new DataTable('#tablaProductos');
     })
 </script>
+
 </html>

@@ -11,15 +11,27 @@ nav:hover{
     color: white;
 
 }
-
-a {
-    font-size: 20px;
-    color: white;
-    text-decoration: none;
-    text-transform: capitalize;
-    letter-spacing: 1px;
+.navbar{
+    border: 1px solid  rgb(25, 135, 84);
+}
+/* titulo de la w */
+/* Estilos para el título de la vista */
+.view-title {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 100px;
+    color: #395c44;
 }
 
+.view-title i {
+    font-size: 60px;
+    margin-right: 10px;
+    color: #ffffff;
+    background-color: #a3db09;
+    padding: 10px;
+    border-radius: 50%;
+}
 .linea {
     border-bottom: 1px solid;
 }
@@ -36,7 +48,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: normal;
-    background-color: antiquewhite;
+    background-color: #fefefe;
     position: relative;
 }
 
@@ -79,11 +91,6 @@ footer {
     font-weight: bold;
 }
 
-/* h2 {
-    color: #333;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
-
-} */
+.social-icons li i {
+    color: white;
+}

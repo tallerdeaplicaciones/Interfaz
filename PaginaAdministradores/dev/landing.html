@@ -25,9 +25,9 @@
     <title>Bienvenido!</title>
 </head>
 
-<body class="bg-green">
+<body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <nav class="fixed-top navbar navbar-expand-lg navbar-dark bg-success">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img src="./assets/img/imagen-tunel.jpg" alt="Icono Empresarial" width="150" height="50">
@@ -43,19 +43,13 @@
                                 data-bs-target="#loginModal">Iniciar sesion</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Conocer más</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Nuestro equipo</a>
+                            <a class="nav-link" href="#testimonials">Nuestro equipo</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#nosotros">Acerca de nosotros</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#descubre">Novedades</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -89,11 +83,14 @@
             </div>
         </div>
     </div>
-    <div class="container text-center pt-5">
-        <h1>Bienvenido</h1>
-    </div>
 
-    <div class="container mt-2 pt-2">
+    <div class="container mt-5">
+        <div class="container text-center">
+            <h1 class="view-title">
+                <i class="fas fa-sun"></i> ¡Bienvenido al sistema!
+            </h1>
+        </div>
+    
         <div class="row pt-5 align-items-center">
             <div class="col-md-6 text-center mx-auto">
                 <img src="./assets/img/producto1.png" class="img-fluid mx-auto">
@@ -127,9 +124,9 @@
         </div>
         <br>
         <!-- carrusel-->
-        <section id="testimonials" class="section section-sm bg-success">
+        <section id="testimonials" class="section section-sm bg-success p-5 m-5">
             <div class="container">
-                <h2 class="section-title text-center">Testimonios</h2>
+                <h2 class="section-title text-center pt-5">Nuestro Equipo</h2>
                 <div class="row">
                     <div class="col-lg-8 offset-lg-2">
                         <div id="testimonial-carousel" class="carousel slide" data-bs-ride="carousel">
@@ -144,8 +141,8 @@
                                         <img class="testimonial-image" src="./assets/imgCarousel/tesimonials1.jpeg"
                                             alt="Cliente 1">
                                         <p class="testimonial-text">¡La tienda tiene una increíble selección de productos! Encontré todo lo que necesitaba y más. El personal fue muy amable y me ayudó a encontrar exactamente lo que estaba buscando. ¡Volveré sin duda!</p>
-                                        <h5 class="testimonial-name">Catherine Williams</h5>
-                                        <p class="testimonial-status">Cliente habitual</p>
+                                        <h5 class="testimonial-name">María Gutiérres</h5>
+                                        <p class="testimonial-status">Cajera</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
@@ -153,8 +150,8 @@
                                         <img class="testimonial-image" src="./assets/imgCarousel/testimonials2.jpg"
                                             alt="Cliente 2">
                                         <p class="testimonial-text">¡Esta tienda es increíble! Tienen una gran variedad de productos de alta calidad y a precios competitivos. La atención al cliente es excepcional y siempre me siento bienvenido. ¡Recomendaría esta tienda a todos mis amigos y familiares!</p>
-                                        <h5 class="testimonial-name">John Doe</h5>
-                                        <p class="testimonial-status">Cliente satisfecho</p>
+                                        <h5 class="testimonial-name">Juan Pérez</h5>
+                                        <p class="testimonial-status">Vendedor</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
@@ -162,8 +159,8 @@
                                         <img class="testimonial-image" src="./assets/imgCarousel/testimonials3.jpg"
                                             alt="Cliente 3">
                                         <p class="testimonial-text">¡No puedo decir lo suficiente sobre esta tienda! Tienen un personal amable y servicial que siempre está dispuesto a responder mis preguntas y brindar recomendaciones. Cada visita es una experiencia maravillosa. ¡Definitivamente soy un cliente leal!</p>
-                                        <h5 class="testimonial-name">Jane Smith</h5>
-                                        <p class="testimonial-status">Cliente leal</p>
+                                        <h5 class="testimonial-name">Cristian</h5>
+                                        <p class="testimonial-status">Gerente de tienda</p>
                                     </div>
                                 </div>
                             </div>
@@ -183,10 +180,14 @@
             </div>
         </section>
         <!-- acerca de nosotros -->
+        
         <div class="row mt-5 pt-5 align-items-center" id="nosotros">
             <div class="col-md-12 text-center mx-auto">
                 <h1>Acerca de nosotros</h1>
-                <p>Somos un pequeño y acogedor negocio local ubicado en el corazón de tu barrio. Nos enorgullece ser tu tienda de confianza, donde podrás encontrar una amplia variedad de productos para satisfacer tus necesidades diarias.</p>
+                <div class="text-center mb-4">
+                    <i class="fas fa-store-alt fa-4x"></i>
+                </div>
+                <p class="lead">Somos un pequeño y acogedor negocio local ubicado en el corazón de tu barrio. Nos enorgullece ser tu tienda de confianza, donde podrás encontrar una amplia variedad de productos para satisfacer tus necesidades diarias.</p>
                 <p>En nuestro establecimiento, nos esforzamos por ofrecerte una experiencia de compra única y personalizada. Nuestro amable equipo de empleados está siempre dispuesto a ayudarte y brindarte el mejor servicio, con una sonrisa en el rostro.</p>
                 <p>Desde productos básicos de despensa como abarrotes y alimentos frescos, hasta bebidas, productos de limpieza y más, nos aseguramos de tener todo lo que necesitas en un solo lugar. Además, contamos con una selección de productos locales y artesanales para apoyar a los productores de nuestra comunidad.</p>
                 <p>Valoramos la calidad y la frescura de nuestros productos, por lo que trabajamos con proveedores confiables y realizamos revisiones periódicas para garantizar que cada artículo que encuentres en nuestras estanterías cumpla con nuestros estándares de excelencia.</p>
@@ -194,6 +195,8 @@
                 <p>Gracias por ser parte de nuestra comunidad y por apoyar a los negocios locales. Te invitamos a que nos visites y descubras todo lo que tenemos preparado para ti. ¡Es un placer atenderte en nuestra tienda!</p>
             </div>
         </div>
+        
+        
     </div>
 
     <div class="container-fluid mt-5 pt-5 bg-success">

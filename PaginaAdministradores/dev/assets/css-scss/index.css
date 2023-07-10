@@ -12,14 +12,9 @@ nav:hover{
 
 }
 
-a {
-    font-size: 20px;
-    color: white;
-    text-decoration: none;
-    text-transform: capitalize;
-    letter-spacing: 1px;
+.navbar{
+    border: 1px solid  rgb(25, 135, 84);
 }
-
 .modal-content {
     background-color: rgb(117, 166, 31);
 }
@@ -108,4 +103,8 @@ footer {
     height: auto;
     border: solid 4px;
     border-radius: 5px;
+}
+
+.social-icons li i {
+    color: white;
 }

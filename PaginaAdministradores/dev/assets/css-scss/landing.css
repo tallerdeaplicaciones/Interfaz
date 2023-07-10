@@ -3,24 +3,33 @@
     margin: 0;
     padding: 0;
 }
-
-/* navbars rules */
-
-nav{
-    background-color: green;
+body {
+    background-color: #fefefe;
 }
+/* titulos h1 */
+/* Estilos para el título de la vista */
+.view-title {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 100px;
+    color: #395c44;
+}
+
+.view-title i {
+    font-size: 60px;
+    margin-right: 10px;
+    color: white;
+    background-color: #a3db09;
+    padding: 10px;
+    border-radius: 50%;
+}
+/* navbars rules */
 nav:hover{
     color: white;
 
 }
 
-a {
-    font-size: 20px !important;
-    color: white !important;
-    text-decoration: none !important;
-    text-transform: capitalize !important;
-    letter-spacing: 1px !important;
-}
 .container #bienvenida{
     padding-top:100px ;
     text-align: center;
@@ -45,7 +54,7 @@ a {
 .testimonial-item {
     text-align: center;
     padding: 30px;
-    background-color: #f8f8f8;
+    background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -74,10 +83,11 @@ footer {
     justify-content: center;
     margin: 0px 0px;
 }
-
-body {
-    background-color: #D3D3D3;
+.social-icons li i {
+    color: white;
 }
+
+
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {

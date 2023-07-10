@@ -12,16 +12,27 @@ nav:hover{
     color: white;
 
 }
-
-a {
-    font-size: 14px;
-    color: white;
-    text-decoration: none;
-    text-transform: capitalize;
-    letter-spacing: 1px;
+.navbar{
+    border: 2px solid  rgb(25, 135, 84);
+}
+/* titulo de la w */
+/* Estilos para el título de la vista */
+.view-title {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 100px;
+    color: #395c44;
 }
 
-
+.view-title i {
+    font-size: 60px;
+    margin-right: 10px;
+    color: #ffffff;
+    background-color: #a3db09;
+    padding: 10px;
+    border-radius: 50%;
+}
 #tablaVentasContainer {
     width: 100%;
     height: 600px;
@@ -43,7 +54,7 @@ a {
 
 }
 body {
-    background-color: #D3D3D3;
+    background-color: #fefefe;
 }
 
 
@@ -51,7 +62,7 @@ body {
 
 #tablaVentas th,
 #tablaVentas td {
-    background-color: #f2f2f2;
+    background-color: #fefefe;
     min-width: 140px;
     padding: 10px;
     text-align: center;
@@ -76,4 +87,7 @@ footer{
     flex-wrap: wrap;
     justify-content: center;
     margin: 0px 0px;
+}
+.social-icons li i {
+    color: white;
 }

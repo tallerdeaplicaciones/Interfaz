@@ -1,4 +1,16 @@
 $(document).ready(function(){
+    $('#myModal').on('show.bs.modal', function () {
+        // Restablecer el formulario
+        $('#formularioRegistroCliente')[0].reset();
+
+        // Reiniciar la validación
+        $('#formularioRegistroCliente').validate().resetForm();
+    });
+
+    $("#btnGuardar").click(function () {
+        // Forzar la validación y mostrar los mensajes de error
+        $("#formularioRegistroCliente").validate().form();
+    });
     $("#formularioRegistroCliente").validate({
         rules:{
             razonSocial:{
@@ -33,7 +45,8 @@ $(document).ready(function(){
             } 
         }
     });
-    $("#generarFactura").on("click", function(e) {
+
+    $("#registroCliente").on("click", ".btn-primary", function(e) {
         if (!$("#formularioRegistroCliente").valid()) {
             e.preventDefault(); // Evita que se ejecute la acción del botón
         }

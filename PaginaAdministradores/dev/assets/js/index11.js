@@ -1,4 +1,16 @@
 $(document).ready(function () {
+    $('#myModal').on('show.bs.modal', function () {
+        // Restablecer el formulario
+        $('#productForm')[0].reset();
+
+        // Reiniciar la validación
+        $('#productForm').validate().resetForm();
+    });
+
+    $("#btnIngresar").click(function () {
+        // Forzar la validación y mostrar los mensajes de error
+        $("#productForm").validate().form();
+    });
     $("#productForm").validate({
         rules: {
             codigoProducto: {
@@ -53,6 +65,9 @@ $(document).ready(function () {
                 required: "Debe ingresar la cantidad en inventario",
                 number: "La cantidad en inventario debe ser numérica"
             }
+        },
+        onfocusout: function (element) {
+            $(element).valid();
         }
     });
 });
@@ -66,3 +81,68 @@ $(document).ready(function () {
         }
     });
 });
+
+
+$(document).ready(function () {
+    $('#registerModal').on('show.bs.modal', function () {
+        // Restablecer el formulario
+        $('#register-form')[0].reset();
+
+        // Reiniciar la validación
+        $('#register-form').validate().resetForm();
+    });
+    $("#btnRegistrar").click(function () {
+        // Forzar la validación y mostrar los mensajes de error
+        $("#register-form").validate().form();
+    });
+    $("#register-form").validate({
+        rules: {
+            name: {
+                required: true
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            password: {
+                required: true,
+                minlength: 6
+            },
+            userType: {
+                required: true
+            }
+        },
+        messages: {
+            name: {
+                required: "Por favor, ingresa tu nombre"
+            },
+            email: {
+                required: "Por favor, ingresa tu correo electrónico",
+                email: "Por favor, ingresa un correo electrónico válido"
+            },
+            password: {
+                required: "Por favor, ingresa tu contraseña",
+                minlength: "La contraseña debe tener al menos 6 caracteres"
+            },
+            userType: {
+                required: "Por favor, selecciona un tipo de usuario"
+            }
+        },
+        onfocusout: function (element) {
+            $(element).valid();
+        }
+    });
+});
+
+$(document).ready(function () {
+    $('#btnRegistrar').click(function () {
+        $(this).toggleClass('changed');
+        if ($(this).hasClass('changed')) {
+            $(this).text('Cierre de registro');
+        } else {
+            $(this).text('Registrar');
+        }
+    });
+});
+
+

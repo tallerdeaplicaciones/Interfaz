@@ -60,8 +60,6 @@ input {
 label.error {
     color: red;
     display: block;
-    margin-top: 35px;
-    position: absolute;
     left: 145px
 }
 

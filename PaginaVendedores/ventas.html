@@ -241,7 +241,7 @@
 
     <!-- Modal Registro de Cliente FACTURA -->
     <div class="modal fade" id="registroCliente" tabindex="-1" aria-labelledby="registroClienteLabel"
-        aria-hidden="true">
+        aria-hidden="true" id="myModal">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -249,7 +249,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="formularioRegistroCliente">
+                    <form id="formularioRegistroCliente" method="post">
                         <div class="mb-3">
                             <label for="razonSocial" class="form-label">Razón Social del Cliente</label>
                             <input type="text" class="form-control" id="razonSocial" name="razonSocial">
@@ -272,7 +272,7 @@
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                         Cerrar
                     </button>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#generarFactura">
+                    <button id="btnGuardar" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#generarFactura">
                         Guardar
                     </button>
                 </div>

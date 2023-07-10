@@ -5,10 +5,10 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- JQUERY -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
-    crossorigin="anonymous"></script>
+    <!-- Agregar libreria de Jquery y Validación-->
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
     rel="stylesheet"
@@ -26,10 +26,10 @@
 </head>
 
 <body>
-    <header>
+    <header id="viewup">
         <nav class="fixed-top navbar navbar-expand-lg navbar-dark bg-success">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="#viewup">
                     <img src="./assets/img/imagen-tunel.jpg" alt="Icono Empresarial" width="150" height="50">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -67,15 +67,14 @@
                 </div>
                 <div class="modal-body">
                     <!-- Formulario de inicio de sesión -->
-                    <form>
+                    <form id="iniciarSesion" method="post">
                         <div class="mb-3">
                             <label for="emailRegistro" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="emailRegistro" placeholder="Ingresa tu email">
+                            <input type="email" class="form-control" id="emailRegistro" name="emailRegistro" placeholder="Ingresa tu email">
                         </div>
                         <div class="mb-3">
                             <label for="passwordRegistro" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="passwordRegistro"
-                                placeholder="Ingresa tu contraseña">
+                            <input type="password" class="form-control" id="passwordRegistro" name="passwordRegistro" placeholder="Ingresa tu contraseña">
                         </div>
                         <button type="button" id="login-button" class="btn btn-primary">Iniciar sesión</button>
                     </form>
@@ -93,7 +92,7 @@
     
         <div class="row pt-5 align-items-center">
             <div class="col-md-6 text-center mx-auto">
-                <img src="./assets/img/producto1.png" class="img-fluid mx-auto">
+                <img src="./assets/img/producto1.png" class="productos img-fluid mx-auto">
             </div>
             <div class="col-md-6 text-center mx-auto">
                 <h1>¡Descubre el Fuzollavalozas Concentrado Ecológico!</h1>
@@ -118,13 +117,13 @@
 
             </div>
             <div class="col-md-6 text-center mx-auto">
-                <img src="./assets/img/producto3.jpg" class="img-fluid mx-auto">
+                <img src="./assets/img/producto3.jpg" class="productos img-fluid mx-auto">
             </div>
             
         </div>
         <br>
         <!-- carrusel-->
-        <section id="testimonials" class="section section-sm bg-success p-5 m-5">
+        <section id="testimonials" class="section section-sm bg-success p-5 m-5 rounded">
             <div class="container">
                 <h2 class="section-title text-center pt-5">Nuestro Equipo</h2>
                 <div class="row">

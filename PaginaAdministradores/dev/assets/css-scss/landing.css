@@ -30,6 +30,18 @@ nav:hover{
 
 }
 
+label.error {
+    color: red;
+    display: block;
+    left: 145px
+}
+
+input.error {
+    border: 1px solid red;
+    font-weight: 300;
+    color: red;
+}
+
 .container #bienvenida{
     padding-top:100px ;
     text-align: center;
@@ -106,4 +118,12 @@ footer {
 
 .modal-body {
     font-weight: bold;
+}
+/* efectos varios */
+.productos {
+    transition: transform 0.3s ease-out;
+}
+.productos:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }

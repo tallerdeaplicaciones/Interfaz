@@ -54,7 +54,7 @@ input.error {
     font-size: 25px;
 }
 .testimonial-image {
-    max-width: 300px;
+    /* max-width: 300px; */
     height: auto;
     margin: 0 auto;
 }
@@ -118,12 +118,4 @@ footer {
 
 .modal-body {
     font-weight: bold;
-}
-/* efectos varios */
-.productos {
-    transition: transform 0.3s ease-out;
-}
-.productos:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }

@@ -1,0 +1,29 @@
+/* efectos varios */
+/* index */
+.imgIconsSeba {
+    transition: transform 0.3s ease-out;
+}
+.imgIconsSeba:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+/* landing */
+/* efectos varios */
+.productos {
+    transition: transform 0.3s ease-out;
+}
+.productos:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+/* logo de el tunel en el navbar */
+.navbar-brand {
+    transition: transform 0.3s ease-out;
+  }
+  
+  .navbar-brand:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+

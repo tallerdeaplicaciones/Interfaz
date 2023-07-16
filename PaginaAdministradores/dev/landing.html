@@ -10,15 +10,15 @@
         integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
-    rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
-    crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Font awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
     <!-- My CSS -->
     <link rel="stylesheet" href="./assets/css-scss/landing.css">
+    <!-- efectos css -->
+    <link rel="stylesheet" href="./assets/css-scss/efectos.css">
     <!-- icono pestaña -->
     <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
@@ -70,11 +70,13 @@
                     <form id="iniciarSesion" method="post">
                         <div class="mb-3">
                             <label for="emailRegistro" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="emailRegistro" name="emailRegistro" placeholder="Ingresa tu email">
+                            <input type="email" class="form-control" id="emailRegistro" name="emailRegistro"
+                                placeholder="Ingresa tu email">
                         </div>
                         <div class="mb-3">
                             <label for="passwordRegistro" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="passwordRegistro" name="passwordRegistro" placeholder="Ingresa tu contraseña">
+                            <input type="password" class="form-control" id="passwordRegistro" name="passwordRegistro"
+                                placeholder="Ingresa tu contraseña">
                         </div>
                         <button type="button" id="login-button" class="btn btn-primary">Iniciar sesión</button>
                     </form>
@@ -89,7 +91,7 @@
                 <i class="fas fa-sun"></i> ¡Bienvenido al sistema!
             </h1>
         </div>
-    
+
         <div class="row pt-5 align-items-center">
             <div class="col-md-6 text-center mx-auto">
                 <img src="./assets/img/producto1.png" class="productos img-fluid mx-auto">
@@ -119,7 +121,7 @@
             <div class="col-md-6 text-center mx-auto">
                 <img src="./assets/img/producto3.jpg" class="productos img-fluid mx-auto">
             </div>
-            
+
         </div>
         <br>
         <!-- carrusel-->
@@ -136,27 +138,35 @@
                             </ol>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <div class="testimonial-item">
-                                        <img class="testimonial-image" src="./assets/imgCarousel/tesimonials1.jpeg"
+                                    <div class="testimonial-item text-center">
+                                        <div class="d-flex justify-content-center">
+                                            <img class="testimonial-image rounded-circle img-fluid" src="./assets/imgCarousel/tesimonials1.jpeg"
                                             alt="Cliente 1">
+                                        </div>
                                         <p class="testimonial-text">He estado trabajando como vendedor en esta tienda durante años y no puedo estar más satisfecho con mi trabajo. El equipo de ventas es muy profesional y siempre estamos dispuestos a ayudar a nuestros clientes. ¡Es un trabajo gratificante y emocionante!</p>
                                         <h5 class="testimonial-name">María Gutiérres</h5>
                                         <p class="testimonial-status">Cajera</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
-                                    <div class="testimonial-item">
-                                        <img class="testimonial-image" src="./assets/imgCarousel/testimonials2.jpg"
+                                    <div class="testimonial-item text-center">
+                                        <div class="d-flex justify-content-center">
+                                            <img class="testimonial-image rounded-circle img-fluid" src="./assets/imgCarousel/testimonials2.jpg"
                                             alt="Cliente 2">
+                                        </div>
+                                        
                                         <p class="testimonial-text">Trabajar en esta tienda ha sido una experiencia increíble. El ambiente laboral es muy positivo y el equipo es muy colaborador. Me siento valorado y apreciado en mi rol como cajero. ¡Es un lugar maravilloso para trabajar!</p>
                                         <h5 class="testimonial-name">Juan Pérez</h5>
                                         <p class="testimonial-status">Vendedor</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
-                                    <div class="testimonial-item">
-                                        <img class="testimonial-image" src="./assets/imgCarousel/testimonials3.jpg"
+                                    <div class="testimonial-item text-center">
+                                        <div class="d-flex justify-content-center">
+                                            <img class="testimonial-image rounded-circle img-fluid" src="./assets/imgCarousel/testimonials3.jpg"
                                             alt="Cliente 3">
+                                        </div>
+                                        
                                         <p class="testimonial-text">Ser gerente de esta tienda es un honor. Me enorgullece liderar un equipo tan dedicado y comprometido. Juntos, hemos logrado un gran éxito y hemos creado un ambiente acogedor para nuestros clientes. ¡Estoy emocionado por el futuro de nuestra tienda!</p>
                                         <h5 class="testimonial-name">Cristian</h5>
                                         <p class="testimonial-status">Gerente de tienda</p>
@@ -178,33 +188,52 @@
                 </div>
             </div>
         </section>
+
+
         <!-- acerca de nosotros -->
-        
+
         <div class="row mt-5 pt-5 align-items-center" id="nosotros">
             <div class="col-md-12 text-center mx-auto">
                 <h1>Acerca de nosotros</h1>
                 <div class="text-center mb-4">
                     <i class="fas fa-store-alt fa-4x"></i>
                 </div>
-                <p class="lead">Somos un pequeño y acogedor negocio local ubicado en el corazón de tu barrio. Nos enorgullece ser tu tienda de confianza, donde podrás encontrar una amplia variedad de productos para satisfacer tus necesidades diarias.</p>
-                <p>En nuestro establecimiento, nos esforzamos por ofrecerte una experiencia de compra única y personalizada. Nuestro amable equipo de empleados está siempre dispuesto a ayudarte y brindarte el mejor servicio, con una sonrisa en el rostro.</p>
-                <p>Desde productos básicos de despensa como abarrotes y alimentos frescos, hasta bebidas, productos de limpieza y más, nos aseguramos de tener todo lo que necesitas en un solo lugar. Además, contamos con una selección de productos locales y artesanales para apoyar a los productores de nuestra comunidad.</p>
-                <p>Valoramos la calidad y la frescura de nuestros productos, por lo que trabajamos con proveedores confiables y realizamos revisiones periódicas para garantizar que cada artículo que encuentres en nuestras estanterías cumpla con nuestros estándares de excelencia.</p>
-                <p>Entendemos la importancia de la comodidad y la conveniencia en tu rutina diaria, por lo que nos esforzamos por mantener nuestros precios competitivos y ofrecerte opciones de pago flexibles. También nos complace brindarte recomendaciones y sugerencias para que encuentres exactamente lo que buscas.</p>
-                <p>Gracias por ser parte de nuestra comunidad y por apoyar a los negocios locales. Te invitamos a que nos visites y descubras todo lo que tenemos preparado para ti. ¡Es un placer atenderte en nuestra tienda!</p>
+                <p class="lead">Somos un pequeño y acogedor negocio local ubicado en el corazón de tu barrio. Nos
+                    enorgullece ser tu tienda de confianza, donde podrás encontrar una amplia variedad de productos para
+                    satisfacer tus necesidades diarias.</p>
+                <p>En nuestro establecimiento, nos esforzamos por ofrecerte una experiencia de compra única y
+                    personalizada. Nuestro amable equipo de empleados está siempre dispuesto a ayudarte y brindarte el
+                    mejor servicio, con una sonrisa en el rostro.</p>
+                <p>Desde productos básicos de despensa como abarrotes y alimentos frescos, hasta bebidas, productos de
+                    limpieza y más, nos aseguramos de tener todo lo que necesitas en un solo lugar. Además, contamos con
+                    una selección de productos locales y artesanales para apoyar a los productores de nuestra comunidad.
+                </p>
+                <p>Valoramos la calidad y la frescura de nuestros productos, por lo que trabajamos con proveedores
+                    confiables y realizamos revisiones periódicas para garantizar que cada artículo que encuentres en
+                    nuestras estanterías cumpla con nuestros estándares de excelencia.</p>
+                <p>Entendemos la importancia de la comodidad y la conveniencia en tu rutina diaria, por lo que nos
+                    esforzamos por mantener nuestros precios competitivos y ofrecerte opciones de pago flexibles.
+                    También nos complace brindarte recomendaciones y sugerencias para que encuentres exactamente lo que
+                    buscas.</p>
+                <p>Gracias por ser parte de nuestra comunidad y por apoyar a los negocios locales. Te invitamos a que
+                    nos visites y descubras todo lo que tenemos preparado para ti. ¡Es un placer atenderte en nuestra
+                    tienda!</p>
             </div>
         </div>
-        
-        
+
+
     </div>
 
     <div class="container-fluid mt-5 pt-5 bg-success">
         <div class="row align-items-center">
             <div class="col-md-12 text-center mx-auto">
                 <ul class="list-inline social-icons">
-                    <li class="list-inline-item"><a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                    <li class="list-inline-item"><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                    <li class="list-inline-item"><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.twitter.com/" target="_blank"><i
+                                class="fab fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.instagram.com/" target="_blank"><i
+                                class="fab fa-instagram"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.facebook.com/" target="_blank"><i
+                                class="fab fa-facebook"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -217,9 +246,9 @@
             <p class="text-center">© 2023 El Túnel SpA</p>
         </div>
     </footer>
-  
-    
-  
+
+
+
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

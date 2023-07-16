@@ -20,7 +20,8 @@
     <!-- icono pestaña -->
     <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
-
+    <!-- efectoscss -->
+    <link rel="stylesheet" href="./assets/css-scss/efectos.css">
 
 
 </head>
@@ -98,7 +99,7 @@
                             </div>
                             <br>
                             <div class="mb-3">
-                                <label for="inventario" class="form-label">Inventario</label>
+                                <label for="inventario" class="form-label">Cantidad en stock</label>
                                 <input type="text" class="form-control" id="inventario" name="inventario">
                             </div>
                         </fieldset>
@@ -152,7 +153,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary" id="btnRegistrar">Registrar</button>
+                    <button type="button" class="btn btn-primary" id="btnRegistrar" data-bs-dismiss="modal">Registrar</button>
                 </div>
             </div>
         </div>
@@ -169,9 +170,9 @@
                         <p class="mensaje">Eres muy importante para nosotros, gracias por ayudarnos en el crecimiento de
                             este negocio. Te queremos <i class="far fa-smile"></i> </p>
                         <div class="iconos">
-                            <img src="./assets/img/icono1.png" alt="">
-                            <img src="./assets/img/icono2.png" alt="">
-                            <img src="./assets/img/icono3.png" alt="">
+                            <img class="imgIconsSeba" src="./assets/img/icono1.png" alt="">
+                            <img class="imgIconsSeba" src="./assets/img/icono2.png" alt="">
+                            <img class="imgIconsSeba" src="./assets/img/icono3.png" alt="">
                         </div>
                         <br>
                     </div>
